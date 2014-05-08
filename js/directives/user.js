@@ -9,25 +9,26 @@ maverick.directive('user', function(){
 				y: 25,
 				width: 50,
 				height: 50,
-				fill: 'black'
-			}
+				fill: 'black',
+                isFightingEnemy: false
+			};
 		},
 
-		link: function(scope, element){
+		link: function(scope){
 			var up = angular.element($('#upBtn'));
-			up.bind('click', function(e){
+			up.bind('click', function(){
 				scope.user.health++;
 				scope.$apply();
 			});
 
 			var down = angular.element($('#downBtn'));
-			down.bind('click', function(e){
+			down.bind('click', function(){
 				scope.user.health--;
 				scope.$apply();
 			});
 
 			angular.element(document).bind("keyup", function(event){
-				switch(event.which){
+                switch(event.which){
 					case 37:
 						if(scope.user.x >= 50) scope.user.x -= 50;
 						break;
@@ -40,6 +41,13 @@ maverick.directive('user', function(){
 					case 40:
 						if(scope.user.y <= 450) scope.user.y += 50;
 						break;
+                    case 32:
+                        if(scope.user.isFightingEnemy){
+                            scope.user.isFightingEnemy = false;
+                        } else {
+                            scope.user.isFightingEnemy = true;
+                        }
+                        break;
 					default:
 						break;
 				}

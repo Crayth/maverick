@@ -391,7 +391,7 @@
     <inspection_tool class="JSDuplicatedDeclaration" enabled="true" level="WARNING" enabled_by_default="true">
       <scope name="thirdparty" level="WARNING" enabled="false" />
     </inspection_tool>
-    <inspection_tool class="JSHint" enabled="true" level="ERROR" enabled_by_default="true">
+    <inspection_tool class="JSHint" enabled="true" level="ERROR" enabled_by_default="false">
       <scope name="thirdparty" level="ERROR" enabled="false" />
     </inspection_tool>
     <inspection_tool class="JSJQueryEfficiency" enabled="true" level="WARNING" enabled_by_default="true">
