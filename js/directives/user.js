@@ -42,11 +42,8 @@ maverick.directive('user', function(){
 						if(scope.user.y <= 450) scope.user.y += 50;
 						break;
                     case 32:
-                        if(scope.user.isFightingEnemy){
-                            scope.user.isFightingEnemy = false;
-                        } else {
-                            scope.user.isFightingEnemy = true;
-                        }
+                        $('#canvas').toggle();
+                        $('#battleScene').toggle();
                         break;
 					default:
 						break;
