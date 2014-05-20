@@ -1,3 +1,7 @@
-body { padding-top: 70px; }
+body { margin: 0; }
+
+.navbar { height: 100px; margin-bottom: 0 }
+
+#mainScene { background-color: #d0d0d0; position: relative; top: 110px; }
 
 #battleScene { display:none; }
