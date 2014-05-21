@@ -1,7 +1,9 @@
 body { margin: 0; }
+.col-xs-12 { padding: 0 }
 
 .navbar { height: 100px; margin-bottom: 0 }
 
 #mainScene { background-color: #d0d0d0; position: relative; top: 110px; }
 
+#canvas { width: 500px; height: 500px; }
 #battleScene { display:none; }
